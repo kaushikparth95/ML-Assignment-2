@@ -1,0 +1,86 @@
+{
+  "dataset": "UCI Online Shoppers Purchasing Intention (id 468)",
+  "target": "Revenue",
+  "class_labels": {
+    "0": "No purchase",
+    "1": "Purchase"
+  },
+  "feature_columns": [
+    "Administrative",
+    "Administrative_Duration",
+    "Informational",
+    "Informational_Duration",
+    "ProductRelated",
+    "ProductRelated_Duration",
+    "PageValues",
+    "BounceRates",
+    "ExitRates",
+    "SpecialDay",
+    "Month",
+    "VisitorType",
+    "Weekend",
+    "OperatingSystems",
+    "Browser",
+    "Region",
+    "TrafficType"
+  ],
+  "log_columns": [
+    "Administrative",
+    "Administrative_Duration",
+    "Informational",
+    "Informational_Duration",
+    "ProductRelated",
+    "ProductRelated_Duration",
+    "PageValues"
+  ],
+  "rate_columns": [
+    "BounceRates",
+    "ExitRates",
+    "SpecialDay"
+  ],
+  "categorical": [
+    "Month",
+    "VisitorType",
+    "Weekend",
+    "OperatingSystems",
+    "Browser",
+    "Region",
+    "TrafficType"
+  ],
+  "model_files": {
+    "Logistic Regression": "logistic_regression.joblib",
+    "Decision Tree": "decision_tree.joblib",
+    "KNN": "knn.joblib",
+    "Naive Bayes": "naive_bayes.joblib",
+    "Support Vector Machine": "svm.joblib"
+  },
+  "best_params": {
+    "Logistic Regression": {
+      "C": 0.01,
+      "class_weight": "balanced"
+    },
+    "Decision Tree": {
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 12,
+      "min_samples_leaf": 30
+    },
+    "KNN": {
+      "n_neighbors": 21,
+      "p": 2,
+      "weights": "distance"
+    },
+    "Naive Bayes": {
+      "var_smoothing": 0.1
+    },
+    "Support Vector Machine": {
+      "C": 0.5,
+      "class_weight": "balanced",
+      "gamma": 0.01
+    }
+  },
+  "seed": 2611,
+  "rows_after_dedup": 12205,
+  "train_rows": 9764,
+  "test_rows": 2441
+}
